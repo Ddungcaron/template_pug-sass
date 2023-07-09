@@ -1,0 +1,33 @@
+.sp-only {
+    @include responsive(md) {
+        display: none !important;
+    }
+}
+
+.pc-only {
+    display: none !important;
+
+    @include responsive(md) {
+        display: block !important;
+    }
+    
+    &--flex {
+        @include responsive(md) {
+            display: flex !important;
+        }
+    }
+}
+
+.line-break-sp {
+    display: block;
+
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+.line-break-pc {
+    @include responsive(md) {
+        display: block;
+    }
+}

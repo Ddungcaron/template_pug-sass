@@ -1,0 +1,11 @@
+extends ../layout/_page
+
+block append config
+    - var title = "下層ページ2"
+    - var ROOT_PATH = '../';
+    - var IMG_PATH = ROOT_PATH + 'img/';
+
+block append head
+    link(rel='stylesheet', href=ROOT_PATH+'css/subpage-2/style.css')
+
+block content

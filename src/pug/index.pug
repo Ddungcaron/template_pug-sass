@@ -1,0 +1,14 @@
+extends ./layout/_top
+
+block append config
+    - var title = "トップページ"
+    - var ROOT_PATH = './';
+    - var IMG_PATH = ROOT_PATH + 'img/';
+
+block append head
+    link(rel='stylesheet', href=ROOT_PATH+'css/style.css')
+
+block content
+
+block script
+    script(src=ROOT_PATH+'js/top.js')

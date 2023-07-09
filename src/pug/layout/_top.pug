@@ -1,0 +1,17 @@
+block config
+    include ../_config
+
+doctype html
+html(lang="ja")
+    head
+        block head
+            include ../include/_head
+
+    body
+        include ../include/_header
+
+        block content
+
+        include ../include/_footer
+
+        block script
