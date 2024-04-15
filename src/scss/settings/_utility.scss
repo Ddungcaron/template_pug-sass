@@ -1,3 +1,9 @@
+@use "../mixins/_responsive" as *;
+
+/*
+ * ユーティリティクラス
+ */
+
 .sp-only {
     @include responsive(md) {
         display: none !important;

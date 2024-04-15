@@ -2,3 +2,4 @@ node_modules
 dest/img/*
 dest/css/style.css
 .vscode/*
+package-lock.json

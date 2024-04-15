@@ -16,7 +16,7 @@ const compilePug = () =>
         .pipe(browserSync.stream());
 
 const compileSass = () =>
-    src(["src/sass/*.scss", "src/sass/*/*.scss"])
+    src(["src/scss/*.scss", "src/scss/*/*.scss"])
         .pipe(sass())
         .pipe(sassGlob())
         .pipe(postcss([ autoprefixer() ]))
@@ -42,8 +42,8 @@ const watchTask = () =>
     watch("dest/*").on('change', browserSync.reload);
     watch("src/pug/*", series(compilePug)).on('change', browserSync.reload);
     watch("src/pug/*/**", series(compilePug)).on('change', browserSync.reload);
-    watch("src/sass/*", series(compileSass)).on('change', browserSync.reload);
-    watch("src/sass/*/*", series(compileSass)).on('change', browserSync.reload);
+    watch("src/scss/*", series(compileSass)).on('change', browserSync.reload);
+    watch("src/scss/*/*", series(compileSass)).on('change', browserSync.reload);
 
 exports.default = watchTask
 exports.compileSass = compileSass

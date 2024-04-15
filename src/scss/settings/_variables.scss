@@ -1,6 +1,7 @@
 // 基準となるビューポート
-$baseWidth_pc: ;
-$baseWidth_sp: ;
+$baseWidth_pc: 1366;
+$baseWidth_sp: 375;
+$baseFontSize: 16;
 
 $breakpoints: (
   'xs': (min-width: 0),

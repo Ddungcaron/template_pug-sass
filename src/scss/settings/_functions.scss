@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "./variables";
+
+@function px-to-vw-pc($px) {
+  @return $px / $baseWidth_pc * 100vw;
+}
+
+@function px-to-vw-sp($px) {
+  @return $px / $baseWidth_sp * 100vw;
+}
+
+@function rem($px, $context: $baseFontSize) {
+  @if (unitless($px)) {
+    $px: $px * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return math.div($px, $context) * 1rem;
+}
